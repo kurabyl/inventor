@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
-
+Route::get('/',[\App\Http\Controllers\HomeController::class,'beforeAuth']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('/store',[App\Http\Controllers\HomeController::class, 'store'])->name('store');
